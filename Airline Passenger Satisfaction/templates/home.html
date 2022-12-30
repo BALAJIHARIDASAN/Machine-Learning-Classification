@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Airline Satisfaction prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="Gender" placeholder="Gender" required="required" /><br>
+    	<input type="text" name="Customer Type	" placeholder="Customer Type	" required="required" /><br>
+        <input type="text" name="Age" placeholder="Age" required="required" /><br>
+        <input type="text" name="Class" placeholder="Class" required="required" /><br>
+        <input type="text" name="Flight Distance" placeholder="Flight Distance" required="required" /><br>
+        <input type="text" name="Type of Travel" placeholder="Type of Travel" required="required" /><br>
+        <input type="text" name="Inflight wifi service" placeholder="Inflight wifi service" required="required" /><br>
+        <input type="text" name="Departure/Arrival time convenient" placeholder="Departure/Arrival time convenient" required="required" /><br>
+        <input type="text" name="Ease of Online booking" placeholder="Ease of Online booking" required="required" /><br>
+        <input type="text" name="Gate location" placeholder="Gate location" required="day" /><br>
+        <input type="text" name="Food and drink" placeholder="Food and drink" required="required" /><br>
+        <input type="text" name="Online boarding" placeholder="Online boarding" required="required" /><br>
+        <input type="text" name="Seat comfort" placeholder="Seat comfort" required="required" /><br>
+        <input type="text" name="Inflight entertainment" placeholder="Inflight entertainment" required="required" /><br>
+        <input type="text" name="On-board service" placeholder="On-board service" required="required" /><br>
+        <input type="text" name="Leg room service" placeholder="Leg room service" required="required" /><br>
+        <input type="text" name="Baggage handling" placeholder="Baggage handling" required="required" /><br>
+        <input type="text" name="Checkin service" placeholder="Checkin service" required="required" /><br>
+        <input type="text" name="Inflight service" placeholder="Inflight service" required="required" /><br>
+        <input type="text" name="Cleanliness" placeholder="Cleanliness" required="required" /><br>
+        <input type="text" name="Departure Delay in Minutes" placeholder="Departure Delay in Minutes" required="required" /><br>
+        <input type="text" name="Arrival Delay in Minutes" placeholder="Arrival Delay in Minutes" required="required" /><br>
+
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
