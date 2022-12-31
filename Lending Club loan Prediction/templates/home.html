@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>loan status prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="loan_amnt" placeholder="loan_amnt" required="required" /><br>
+    	<input type="text" name="term  	" placeholder="term  	" required="required" /><br>
+        <input type="text" name="int_rate  " placeholder="int_rate  " required="required" /><br>
+        <input type="text" name="installment  " placeholder="installment  " required="required" /><br>
+        <input type="text" name="sub_grade  " placeholder="sub_grade  " required="required" /><br>
+        <input type="text" name="home_ownership  " placeholder="home_ownership  " required="required" /><br>
+        <input type="text" name="annual_inc  " placeholder="annual_inc  " required="required" /><br>
+        <input type="text" name="verification_status  " placeholder="verification_status  " required="required" /><br>
+        <input type="text" name="purpose    " placeholder="purpose    " required="required" /><br>
+        <input type="text" name="dti  " placeholder="dti  " required="day" /><br>
+        <input type="text" name="open_acc  " placeholder="open_acc  " required="required" /><br>
+        <input type="text" name="pub_rec  " placeholder="pub_rec  " required="required" /><br>
+        <input type="text" name="revol_bal  " placeholder="revol_bal  " required="required" /><br>
+        <input type="text" name="revol_util  " placeholder="revol_util  " required="required" /><br>
+        <input type="text" name="total_acc  " placeholder="total_acc  " required="required" /><br>
+        <input type="text" name="initial_list_status  " placeholder="initial_list_status  " required="required" /><br>
+        <input type="text" name="application_type  " placeholder="application_type  " required="required" /><br>
+        <input type="text" name="mort_acc  " placeholder="mort_acc  " required="required" /><br>
+        <input type="text" name="pub_rec_bankruptcies  " placeholder="pub_rec_bankruptcies  " required="required" /><br>
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
