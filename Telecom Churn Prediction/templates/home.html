@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>loan status prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="gender" placeholder="gender" required="required" /><br>
+    	<input type="text" name="SeniorCitizen       	" placeholder="SeniorCitizen       	" required="required" /><br>
+        <input type="text" name="Partner             " placeholder="Partner             " required="required" /><br>
+        <input type="text" name="Dependents          " placeholder="Dependents          " required="required" /><br>
+        <input type="text" name="tenure              " placeholder="tenure              " required="required" /><br>
+        <input type="text" name="PhoneService        " placeholder="PhoneService        " required="required" /><br>
+        <input type="text" name="MultipleLines       " placeholder="MultipleLines       " required="required" /><br>
+        <input type="text" name="InternetService     " placeholder="InternetService     " required="required" /><br>
+        <input type="text" name="OnlineSecurity        " placeholder="OnlineSecurity   " required="required" /><br>
+        <input type="text" name="OnlineBackup        " placeholder="OnlineBackup        " required="day" /><br>
+        <input type="text" name=" DeviceProtection    " placeholder="DeviceProtection    " required="required" /><br>
+        <input type="text" name="TechSupport         " placeholder="TechSupport         " required="required" /><br>
+        <input type="text" name="StreamingTV         " placeholder="StreamingTV         " required="required" /><br>
+        <input type="text" name="StreamingMovies     " placeholder="StreamingMovies     " required="required" /><br>
+        <input type="text" name="Contract            " placeholder="Contract            " required="required" /><br>
+        <input type="text" name="PaperlessBilling    " placeholder="PaperlessBilling    " required="required" /><br>
+        <input type="text" name="PaymentMethod       " placeholder="PaymentMethod       " required="required" /><br>
+        <input type="text" name="MonthlyCharges      " placeholder="MonthlyCharges      " required="required" /><br>
+        <input type="text" name="TotalCharges        " placeholder="TotalCharges        " required="required" /><br>
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
