@@ -1,6 +1,6 @@
 # Machine-Learning-Classification
 
-![](https://github.com/BALAJIHARIDASAN/Machine-Learning-Classification/blob/main/cl.gif)
+![](https://github.com/BALAJIHARIDASAN/Machine-Learning-Classification/blob/main/ck.gif)
 
 ### :hammer_and_wrench: Algorithms :
 
